@@ -45,11 +45,11 @@
       "type": "date",
       "required": true
     },
-    "project_courses": {
+    "project_course": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::project-course.project-course",
-      "mappedBy": "project"
+      "inversedBy": "projects"
     },
     "project_categories": {
       "type": "relation",

@@ -600,7 +600,7 @@ export interface ApiProjectCourseProjectCourse
       'api::project-course.project-course'
     > &
       Schema.Attribute.Private;
-    project: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
+    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -638,8 +638,8 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::project-category.project-category'
     >;
-    project_courses: Schema.Attribute.Relation<
-      'oneToMany',
+    project_course: Schema.Attribute.Relation<
+      'manyToOne',
       'api::project-course.project-course'
     >;
     publishedAt: Schema.Attribute.DateTime;

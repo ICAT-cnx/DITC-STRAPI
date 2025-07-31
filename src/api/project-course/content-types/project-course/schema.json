@@ -14,11 +14,11 @@
     "course": {
       "type": "string"
     },
-    "project": {
+    "projects": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::project.project",
-      "inversedBy": "project_courses"
+      "mappedBy": "project_course"
     }
   }
 }
