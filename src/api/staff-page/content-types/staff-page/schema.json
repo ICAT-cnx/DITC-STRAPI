@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "staff_pages",
+  "info": {
+    "singularName": "staff-page",
+    "pluralName": "staff-pages",
+    "displayName": "Staff Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "staff": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::staff.staff"
+    }
+  }
+}

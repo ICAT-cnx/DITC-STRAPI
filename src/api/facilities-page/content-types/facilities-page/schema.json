@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "facilities_pages",
+  "info": {
+    "singularName": "facilities-page",
+    "pluralName": "facilities-pages",
+    "displayName": "Facilities Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "facilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::facility.facility"
+    }
+  }
+}

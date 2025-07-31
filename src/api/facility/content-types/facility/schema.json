@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "facilities",
+  "info": {
+    "singularName": "facility",
+    "pluralName": "facilities",
+    "displayName": "Facility"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "main_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sub_images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "video": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "price_per_hour": {
+      "type": "string",
+      "required": true
+    },
+    "available": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "contact_link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

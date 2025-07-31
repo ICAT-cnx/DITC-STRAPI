@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    },
+    "facilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::facility.facility"
+    },
+    "infos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::info.info"
+    }
+  }
+}

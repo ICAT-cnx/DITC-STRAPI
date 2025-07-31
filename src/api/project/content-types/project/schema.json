@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "main_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sub_image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "project_courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-course.project-course",
+      "mappedBy": "project"
+    },
+    "project_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-category.project-category",
+      "inversedBy": "projects"
+    },
+    "urls": {
+      "type": "dynamiczone",
+      "components": [
+        "url-item.urls"
+      ]
+    }
+  }
+}

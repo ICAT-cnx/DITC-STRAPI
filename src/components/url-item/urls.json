@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_url_item_urls",
+  "info": {
+    "displayName": "project-urls"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

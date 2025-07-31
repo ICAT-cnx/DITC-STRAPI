@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "infos",
+  "info": {
+    "singularName": "info",
+    "pluralName": "infos",
+    "displayName": "Info"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "main_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sub_image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}
