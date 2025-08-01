@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_facility_detail_facility_sub_images",
+  "info": {
+    "displayName": "facility-sub-images"
+  },
+  "options": {},
+  "attributes": {
+    "FacilitySubImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

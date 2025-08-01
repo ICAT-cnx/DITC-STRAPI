@@ -18,14 +18,17 @@
       "inversedBy": "staff"
     },
     "firstname": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "lastname": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "profile_image": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -34,7 +37,8 @@
       ]
     },
     "position": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

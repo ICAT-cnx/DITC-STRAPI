@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_facility_detail_facility_descriptions",
+  "info": {
+    "displayName": "facility-description"
+  },
+  "options": {},
+  "attributes": {
+    "FacilityDetail": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

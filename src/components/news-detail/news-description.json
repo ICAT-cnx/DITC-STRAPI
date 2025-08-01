@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_news_detail_news_descriptions",
+  "info": {
+    "displayName": "news-description"
+  },
+  "options": {},
+  "attributes": {
+    "NewsDescription": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

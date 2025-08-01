@@ -27,20 +27,6 @@
         "audios"
       ]
     },
-    "sub_image": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "description": {
-      "type": "blocks",
-      "required": true
-    },
     "date": {
       "type": "date",
       "required": true
@@ -61,6 +47,13 @@
       "type": "dynamiczone",
       "components": [
         "url-item.urls"
+      ]
+    },
+    "ProjectDetail": {
+      "type": "dynamiczone",
+      "components": [
+        "project-detail.project-sub-images",
+        "project-detail.project-description"
       ]
     }
   }

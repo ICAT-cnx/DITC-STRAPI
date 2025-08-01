@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_project_detail_project_descriptions",
+  "info": {
+    "displayName": "project-description"
+  },
+  "options": {},
+  "attributes": {
+    "ProjectDescription": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
