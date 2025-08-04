@@ -19,6 +19,9 @@
       "relation": "manyToMany",
       "target": "api::project.project",
       "mappedBy": "project_categories"
+    },
+    "color": {
+      "type": "string"
     }
   }
 }
