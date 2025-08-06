@@ -30,13 +30,19 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::project-course.project-course",
-      "inversedBy": "projects",
-      "required": true
+      "inversedBy": "projects"
     },
     "project_categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project-category.project-category",
+      "inversedBy": "projects",
+      "required": true
+    },
+    "project_sub_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-sub-category.project-sub-category",
       "inversedBy": "projects",
       "required": true
     },

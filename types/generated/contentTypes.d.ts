@@ -563,6 +563,11 @@ export interface ApiProjectCategoryProjectCategory
       'api::project-category.project-category'
     > &
       Schema.Attribute.Private;
+    project_sub_categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project-sub-category.project-sub-category'
+    > &
+      Schema.Attribute.Required;
     projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -601,6 +606,42 @@ export interface ApiProjectCourseProjectCourse
   };
 }
 
+export interface ApiProjectSubCategoryProjectSubCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'project_sub_categories';
+  info: {
+    displayName: 'Project sub-Category';
+    pluralName: 'project-sub-categories';
+    singularName: 'project-sub-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project-sub-category.project-sub-category'
+    > &
+      Schema.Attribute.Private;
+    project_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::project-category.project-category'
+    > &
+      Schema.Attribute.Required;
+    projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    subCategory: Schema.Attribute.String & Schema.Attribute.Required;
+    subColor: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
@@ -629,10 +670,15 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     project_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::project-category.project-category'
-    >;
+    > &
+      Schema.Attribute.Required;
     project_course: Schema.Attribute.Relation<
       'manyToOne',
       'api::project-course.project-course'
+    >;
+    project_sub_categories: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::project-sub-category.project-sub-category'
     > &
       Schema.Attribute.Required;
     ProjectDetail: Schema.Attribute.DynamicZone<
@@ -764,7 +810,8 @@ export interface ApiStaffStaff extends Struct.CollectionTypeSchema {
     staff_category: Schema.Attribute.Relation<
       'manyToOne',
       'api::staff-category.staff-category'
-    >;
+    > &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1287,6 +1334,7 @@ declare module '@strapi/strapi' {
       'api::news-page.news-page': ApiNewsPageNewsPage;
       'api::project-category.project-category': ApiProjectCategoryProjectCategory;
       'api::project-course.project-course': ApiProjectCourseProjectCourse;
+      'api::project-sub-category.project-sub-category': ApiProjectSubCategoryProjectSubCategory;
       'api::project.project': ApiProjectProject;
       'api::projects-page.projects-page': ApiProjectsPageProjectsPage;
       'api::staff-category.staff-category': ApiStaffCategoryStaffCategory;
