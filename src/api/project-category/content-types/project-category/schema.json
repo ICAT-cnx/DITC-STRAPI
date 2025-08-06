@@ -12,7 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "category": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "projects": {
       "type": "relation",
@@ -21,7 +22,8 @@
       "mappedBy": "project_categories"
     },
     "color": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

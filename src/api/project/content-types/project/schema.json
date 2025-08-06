@@ -20,12 +20,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "date": {
       "type": "date",
@@ -35,7 +30,8 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::project-course.project-course",
-      "inversedBy": "projects"
+      "inversedBy": "projects",
+      "required": true
     },
     "project_categories": {
       "type": "relation",
@@ -45,9 +41,7 @@
     },
     "urls": {
       "type": "dynamiczone",
-      "components": [
-        "url-item.urls"
-      ]
+      "components": ["url-item.urls"]
     },
     "ProjectDetail": {
       "type": "dynamiczone",

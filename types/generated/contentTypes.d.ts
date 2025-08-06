@@ -552,8 +552,8 @@ export interface ApiProjectCategoryProjectCategory
     draftAndPublish: true;
   };
   attributes: {
-    category: Schema.Attribute.String;
-    color: Schema.Attribute.String;
+    category: Schema.Attribute.String & Schema.Attribute.Required;
+    color: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -633,7 +633,8 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     project_course: Schema.Attribute.Relation<
       'manyToOne',
       'api::project-course.project-course'
-    >;
+    > &
+      Schema.Attribute.Required;
     ProjectDetail: Schema.Attribute.DynamicZone<
       [
         'project-detail.project-sub-images',
