@@ -37,7 +37,8 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project-category.project-category",
-      "inversedBy": "projects"
+      "inversedBy": "projects",
+      "required": true
     },
     "urls": {
       "type": "dynamiczone",
