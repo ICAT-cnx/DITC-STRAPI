@@ -15,26 +15,23 @@
       "type": "string",
       "required": true
     },
+    "date": {
+      "type": "date",
+      "required": true
+    },
     "main_image": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "date": {
-      "type": "date"
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "NewsDetail": {
       "type": "dynamiczone",
       "components": [
         "news-detail.news-sub-images",
         "news-detail.news-description"
-      ]
+      ],
+      "required": true
     }
   }
 }

@@ -12,7 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "category": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "staff": {
       "type": "relation",

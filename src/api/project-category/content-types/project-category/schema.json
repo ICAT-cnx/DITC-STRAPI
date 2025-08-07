@@ -15,12 +15,6 @@
       "type": "string",
       "required": true
     },
-    "projects": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::project.project",
-      "mappedBy": "project_categories"
-    },
     "color": {
       "type": "string",
       "required": true
@@ -29,8 +23,13 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::project-sub-category.project-sub-category",
-      "mappedBy": "project_category",
-      "required": true
+      "mappedBy": "project_category"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "mappedBy": "project_categories"
     }
   }
 }

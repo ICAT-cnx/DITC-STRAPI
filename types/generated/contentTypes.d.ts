@@ -425,7 +425,8 @@ export interface ApiFacilityFacility extends Struct.CollectionTypeSchema {
         'facility-detail.facility-sub-images',
         'facility-detail.facility-description',
       ]
-    >;
+    > &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -493,7 +494,7 @@ export interface ApiInfoInfo extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date: Schema.Attribute.Date;
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::info.info'> &
       Schema.Attribute.Private;
@@ -503,7 +504,8 @@ export interface ApiInfoInfo extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required;
     NewsDetail: Schema.Attribute.DynamicZone<
       ['news-detail.news-sub-images', 'news-detail.news-description']
-    >;
+    > &
+      Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -566,8 +568,7 @@ export interface ApiProjectCategoryProjectCategory
     project_sub_categories: Schema.Attribute.Relation<
       'oneToMany',
       'api::project-sub-category.project-sub-category'
-    > &
-      Schema.Attribute.Required;
+    >;
     projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -588,7 +589,7 @@ export interface ApiProjectCourseProjectCourse
     draftAndPublish: true;
   };
   attributes: {
-    course: Schema.Attribute.String;
+    course: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -675,7 +676,8 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     project_course: Schema.Attribute.Relation<
       'manyToOne',
       'api::project-course.project-course'
-    >;
+    > &
+      Schema.Attribute.Required;
     project_sub_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::project-sub-category.project-sub-category'
@@ -686,7 +688,8 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         'project-detail.project-sub-images',
         'project-detail.project-description',
       ]
-    >;
+    > &
+      Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -736,7 +739,7 @@ export interface ApiStaffCategoryStaffCategory
     draftAndPublish: true;
   };
   attributes: {
-    category: Schema.Attribute.String;
+    category: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

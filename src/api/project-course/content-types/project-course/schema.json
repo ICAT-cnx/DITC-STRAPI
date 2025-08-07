@@ -12,7 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "course": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "projects": {
       "type": "relation",

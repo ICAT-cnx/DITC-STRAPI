@@ -11,13 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "staff_category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::staff-category.staff-category",
-      "inversedBy": "staff",
-      "required": true
-    },
     "firstname": {
       "type": "string",
       "required": true
@@ -26,15 +19,22 @@
       "type": "string",
       "required": true
     },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "staff_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::staff-category.staff-category",
+      "inversedBy": "staff",
+      "required": true
+    },
     "profile_image": {
       "type": "media",
       "multiple": false,
       "required": true,
       "allowedTypes": ["images", "files", "videos", "audios"]
-    },
-    "position": {
-      "type": "string",
-      "required": true
     }
   }
 }

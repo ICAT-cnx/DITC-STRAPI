@@ -16,21 +16,12 @@
       "required": true,
       "unique": false
     },
-    "main_image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
-    },
-    "date": {
-      "type": "date",
-      "required": true
-    },
     "project_course": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::project-course.project-course",
-      "inversedBy": "projects"
+      "inversedBy": "projects",
+      "required": true
     },
     "project_categories": {
       "type": "relation",
@@ -46,16 +37,27 @@
       "inversedBy": "projects",
       "required": true
     },
-    "urls": {
-      "type": "dynamiczone",
-      "components": ["url-item.urls"]
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "main_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "ProjectDetail": {
       "type": "dynamiczone",
       "components": [
         "project-detail.project-sub-images",
         "project-detail.project-description"
-      ]
+      ],
+      "required": true
+    },
+    "urls": {
+      "type": "dynamiczone",
+      "components": ["url-item.urls"]
     }
   }
 }

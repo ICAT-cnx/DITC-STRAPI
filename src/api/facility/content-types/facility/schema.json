@@ -19,17 +19,6 @@
       "type": "string",
       "required": true
     },
-    "main_image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "price_per_hour": {
       "type": "string",
       "required": true
@@ -38,12 +27,19 @@
       "type": "string",
       "required": true
     },
+    "main_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
     "FacilityDetail": {
       "type": "dynamiczone",
       "components": [
         "facility-detail.facility-sub-images",
         "facility-detail.facility-description"
-      ]
+      ],
+      "required": true
     }
   }
 }
