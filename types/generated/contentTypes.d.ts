@@ -416,6 +416,9 @@ export interface ApiFacilityFacility extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    available: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
     contact_link: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

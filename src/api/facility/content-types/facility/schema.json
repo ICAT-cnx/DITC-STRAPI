@@ -27,11 +27,21 @@
       "type": "string",
       "required": true
     },
+    "available": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
     "main_image": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "FacilityDetail": {
       "type": "dynamiczone",
