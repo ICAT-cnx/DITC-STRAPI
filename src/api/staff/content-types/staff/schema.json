@@ -4,7 +4,7 @@
   "info": {
     "singularName": "staff",
     "pluralName": "staffs",
-    "displayName": "Staff"
+    "displayName": "06 บุคลากร"
   },
   "options": {
     "draftAndPublish": true
@@ -27,14 +27,18 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::staff-category.staff-category",
-      "inversedBy": "staff",
-      "required": true
+      "inversedBy": "staff"
     },
     "profile_image": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

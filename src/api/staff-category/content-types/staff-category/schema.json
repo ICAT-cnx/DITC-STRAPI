@@ -4,7 +4,7 @@
   "info": {
     "singularName": "staff-category",
     "pluralName": "staff-categories",
-    "displayName": "Staff Category"
+    "displayName": "07 สังกัดของบุคลากร"
   },
   "options": {
     "draftAndPublish": true

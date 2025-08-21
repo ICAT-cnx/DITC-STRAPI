@@ -377,7 +377,7 @@ export interface ApiFacilitiesPageFacilitiesPage
   extends Struct.SingleTypeSchema {
   collectionName: 'facilities_pages';
   info: {
-    displayName: 'Facilities Page';
+    displayName: '03 \u0E2B\u0E19\u0E49\u0E32\u0E2A\u0E34\u0E48\u0E07\u0E2D\u0E33\u0E19\u0E27\u0E22\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E30\u0E14\u0E27\u0E01';
     pluralName: 'facilities-pages';
     singularName: 'facilities-page';
   };
@@ -408,7 +408,7 @@ export interface ApiFacilitiesPageFacilitiesPage
 export interface ApiFacilityFacility extends Struct.CollectionTypeSchema {
   collectionName: 'facilities';
   info: {
-    displayName: 'Facility';
+    displayName: '04 \u0E2A\u0E34\u0E48\u0E07\u0E2D\u0E33\u0E19\u0E27\u0E22\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E30\u0E14\u0E27\u0E01';
     pluralName: 'facilities';
     singularName: 'facility';
   };
@@ -450,7 +450,7 @@ export interface ApiFacilityFacility extends Struct.CollectionTypeSchema {
 export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   collectionName: 'homepages';
   info: {
-    displayName: 'Homepage';
+    displayName: '01 \u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01';
     pluralName: 'homepages';
     singularName: 'homepage';
   };
@@ -483,7 +483,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
 export interface ApiInfoInfo extends Struct.CollectionTypeSchema {
   collectionName: 'infos';
   info: {
-    displayName: 'Info';
+    displayName: '05 \u0E02\u0E48\u0E32\u0E27\u0E2A\u0E32\u0E23';
     pluralName: 'infos';
     singularName: 'info';
   };
@@ -517,7 +517,7 @@ export interface ApiInfoInfo extends Struct.CollectionTypeSchema {
 export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
   collectionName: 'news_pages';
   info: {
-    displayName: 'News Page';
+    displayName: '04 \u0E2B\u0E19\u0E49\u0E32\u0E02\u0E48\u0E32\u0E27\u0E2A\u0E32\u0E23';
     pluralName: 'news-pages';
     singularName: 'news-page';
   };
@@ -546,7 +546,7 @@ export interface ApiProjectCategoryProjectCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'project_categories';
   info: {
-    displayName: 'Project Category';
+    displayName: '02 \u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E02\u0E2D\u0E07\u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23 (\u0E2B\u0E25\u0E31\u0E01)';
     pluralName: 'project-categories';
     singularName: 'project-category';
   };
@@ -577,41 +577,11 @@ export interface ApiProjectCategoryProjectCategory
   };
 }
 
-export interface ApiProjectCourseProjectCourse
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'project_courses';
-  info: {
-    displayName: 'Project Course';
-    pluralName: 'project-courses';
-    singularName: 'project-course';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    course: Schema.Attribute.String & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::project-course.project-course'
-    > &
-      Schema.Attribute.Private;
-    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiProjectSubCategoryProjectSubCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'project_sub_categories';
   info: {
-    displayName: 'Project sub-Category';
+    displayName: '03 \u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E02\u0E2D\u0E07\u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23 (\u0E22\u0E48\u0E2D\u0E22)';
     pluralName: 'project-sub-categories';
     singularName: 'project-sub-category';
   };
@@ -631,8 +601,7 @@ export interface ApiProjectSubCategoryProjectSubCategory
     project_category: Schema.Attribute.Relation<
       'manyToOne',
       'api::project-category.project-category'
-    > &
-      Schema.Attribute.Required;
+    >;
     projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     subCategory: Schema.Attribute.String & Schema.Attribute.Required;
@@ -646,7 +615,7 @@ export interface ApiProjectSubCategoryProjectSubCategory
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
-    displayName: 'Project';
+    displayName: '01 \u0E04\u0E25\u0E31\u0E07\u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23';
     pluralName: 'projects';
     singularName: 'project';
   };
@@ -671,18 +640,11 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     project_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::project-category.project-category'
-    > &
-      Schema.Attribute.Required;
-    project_course: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::project-course.project-course'
-    > &
-      Schema.Attribute.Required;
+    >;
     project_sub_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::project-sub-category.project-sub-category'
-    > &
-      Schema.Attribute.Required;
+    >;
     ProjectDetail: Schema.Attribute.DynamicZone<
       [
         'project-detail.project-sub-images',
@@ -702,7 +664,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
 export interface ApiProjectsPageProjectsPage extends Struct.SingleTypeSchema {
   collectionName: 'projects_pages';
   info: {
-    displayName: 'Projects Page';
+    displayName: '02 \u0E2B\u0E19\u0E49\u0E32\u0E04\u0E25\u0E31\u0E07\u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23';
     pluralName: 'projects-pages';
     singularName: 'projects-page';
   };
@@ -731,7 +693,7 @@ export interface ApiStaffCategoryStaffCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'staff_categories';
   info: {
-    displayName: 'Staff Category';
+    displayName: '07 \u0E2A\u0E31\u0E07\u0E01\u0E31\u0E14\u0E02\u0E2D\u0E07\u0E1A\u0E38\u0E04\u0E25\u0E32\u0E01\u0E23';
     pluralName: 'staff-categories';
     singularName: 'staff-category';
   };
@@ -760,7 +722,7 @@ export interface ApiStaffCategoryStaffCategory
 export interface ApiStaffPageStaffPage extends Struct.SingleTypeSchema {
   collectionName: 'staff_pages';
   info: {
-    displayName: 'Staff Page';
+    displayName: '05 \u0E2B\u0E19\u0E49\u0E32\u0E40\u0E01\u0E35\u0E48\u0E22\u0E27\u0E01\u0E31\u0E1A\u0E40\u0E23\u0E32';
     pluralName: 'staff-pages';
     singularName: 'staff-page';
   };
@@ -788,7 +750,7 @@ export interface ApiStaffPageStaffPage extends Struct.SingleTypeSchema {
 export interface ApiStaffStaff extends Struct.CollectionTypeSchema {
   collectionName: 'staffs';
   info: {
-    displayName: 'Staff';
+    displayName: '06 \u0E1A\u0E38\u0E04\u0E25\u0E32\u0E01\u0E23';
     pluralName: 'staffs';
     singularName: 'staff';
   };
@@ -813,8 +775,7 @@ export interface ApiStaffStaff extends Struct.CollectionTypeSchema {
     staff_category: Schema.Attribute.Relation<
       'manyToOne',
       'api::staff-category.staff-category'
-    > &
-      Schema.Attribute.Required;
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1336,7 +1297,6 @@ declare module '@strapi/strapi' {
       'api::info.info': ApiInfoInfo;
       'api::news-page.news-page': ApiNewsPageNewsPage;
       'api::project-category.project-category': ApiProjectCategoryProjectCategory;
-      'api::project-course.project-course': ApiProjectCourseProjectCourse;
       'api::project-sub-category.project-sub-category': ApiProjectSubCategoryProjectSubCategory;
       'api::project.project': ApiProjectProject;
       'api::projects-page.projects-page': ApiProjectsPageProjectsPage;

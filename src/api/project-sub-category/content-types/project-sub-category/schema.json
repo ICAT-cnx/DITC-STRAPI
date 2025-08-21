@@ -4,7 +4,7 @@
   "info": {
     "singularName": "project-sub-category",
     "pluralName": "project-sub-categories",
-    "displayName": "Project sub-Category"
+    "displayName": "03 ประเภทของโครงการ (ย่อย)"
   },
   "options": {
     "draftAndPublish": true
@@ -23,8 +23,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::project-category.project-category",
-      "inversedBy": "project_sub_categories",
-      "required": true
+      "inversedBy": "project_sub_categories"
     },
     "projects": {
       "type": "relation",

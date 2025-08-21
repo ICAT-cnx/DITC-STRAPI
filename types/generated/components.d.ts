@@ -4,7 +4,7 @@ export interface FacilityDetailFacilityDescription
   extends Struct.ComponentSchema {
   collectionName: 'components_facility_detail_facility_descriptions';
   info: {
-    displayName: 'facility-description';
+    displayName: '\u0E04\u0E33\u0E2D\u0E18\u0E34\u0E1A\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E2D\u0E33\u0E19\u0E27\u0E22\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E30\u0E14\u0E27\u0E01';
   };
   attributes: {
     FacilityDetail: Schema.Attribute.Blocks;
@@ -15,7 +15,7 @@ export interface FacilityDetailFacilitySubImages
   extends Struct.ComponentSchema {
   collectionName: 'components_facility_detail_facility_sub_images';
   info: {
-    displayName: 'facility-sub-images';
+    displayName: '\u0E23\u0E39\u0E1B\u0E20\u0E32\u0E1E\u0E1B\u0E23\u0E30\u0E01\u0E2D\u0E1A';
   };
   attributes: {
     FacilitySubImages: Schema.Attribute.Media<
@@ -28,7 +28,7 @@ export interface FacilityDetailFacilitySubImages
 export interface NewsDetailNewsDescription extends Struct.ComponentSchema {
   collectionName: 'components_news_detail_news_descriptions';
   info: {
-    displayName: 'news-description';
+    displayName: '\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21\u0E02\u0E48\u0E32\u0E27\u0E2A\u0E32\u0E23';
   };
   attributes: {
     NewsDescription: Schema.Attribute.Blocks;
@@ -38,7 +38,7 @@ export interface NewsDetailNewsDescription extends Struct.ComponentSchema {
 export interface NewsDetailNewsSubImages extends Struct.ComponentSchema {
   collectionName: 'components_news_detail_news_sub_images';
   info: {
-    displayName: 'news-sub-images';
+    displayName: '\u0E23\u0E39\u0E1B\u0E20\u0E32\u0E1E\u0E1B\u0E23\u0E30\u0E01\u0E2D\u0E1A';
   };
   attributes: {
     NewsSubImages: Schema.Attribute.Media<
@@ -52,7 +52,7 @@ export interface ProjectDetailProjectDescription
   extends Struct.ComponentSchema {
   collectionName: 'components_project_detail_project_descriptions';
   info: {
-    displayName: 'project-description';
+    displayName: '\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21\u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23';
   };
   attributes: {
     ProjectDescription: Schema.Attribute.Blocks;
@@ -62,7 +62,7 @@ export interface ProjectDetailProjectDescription
 export interface ProjectDetailProjectSubImages extends Struct.ComponentSchema {
   collectionName: 'components_project_detail_project_sub_images';
   info: {
-    displayName: 'project-sub-images';
+    displayName: '\u0E23\u0E39\u0E1B\u0E20\u0E32\u0E1E\u0E1B\u0E23\u0E30\u0E01\u0E2D\u0E1A';
   };
   attributes: {
     ProjectSubImages: Schema.Attribute.Media<
@@ -75,7 +75,7 @@ export interface ProjectDetailProjectSubImages extends Struct.ComponentSchema {
 export interface UrlItemUrls extends Struct.ComponentSchema {
   collectionName: 'components_url_item_urls';
   info: {
-    displayName: 'project-urls';
+    displayName: '\u0E25\u0E34\u0E07\u0E01\u0E4C\u0E17\u0E35\u0E48\u0E40\u0E01\u0E35\u0E48\u0E22\u0E27\u0E02\u0E49\u0E2D\u0E07';
   };
   attributes: {
     url: Schema.Attribute.String;

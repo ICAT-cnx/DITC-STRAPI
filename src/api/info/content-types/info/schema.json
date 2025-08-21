@@ -4,7 +4,7 @@
   "info": {
     "singularName": "info",
     "pluralName": "infos",
-    "displayName": "Info"
+    "displayName": "05 ข่าวสาร"
   },
   "options": {
     "draftAndPublish": true
@@ -23,7 +23,12 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "NewsDetail": {
       "type": "dynamiczone",

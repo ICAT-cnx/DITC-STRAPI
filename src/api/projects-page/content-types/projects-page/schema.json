@@ -4,7 +4,7 @@
   "info": {
     "singularName": "projects-page",
     "pluralName": "projects-pages",
-    "displayName": "Projects Page"
+    "displayName": "02 หน้าคลังโครงการ"
   },
   "options": {
     "draftAndPublish": true

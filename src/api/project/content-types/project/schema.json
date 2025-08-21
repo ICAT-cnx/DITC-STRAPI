@@ -4,7 +4,7 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "01 คลังโครงการ"
   },
   "options": {
     "draftAndPublish": true
@@ -16,26 +16,17 @@
       "required": true,
       "unique": false
     },
-    "project_course": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project-course.project-course",
-      "inversedBy": "projects",
-      "required": true
-    },
     "project_categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project-category.project-category",
-      "inversedBy": "projects",
-      "required": true
+      "inversedBy": "projects"
     },
     "project_sub_categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project-sub-category.project-sub-category",
-      "inversedBy": "projects",
-      "required": true
+      "inversedBy": "projects"
     },
     "date": {
       "type": "date",
@@ -45,7 +36,12 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "ProjectDetail": {
       "type": "dynamiczone",
@@ -57,7 +53,9 @@
     },
     "urls": {
       "type": "dynamiczone",
-      "components": ["url-item.urls"]
+      "components": [
+        "url-item.urls"
+      ]
     }
   }
 }

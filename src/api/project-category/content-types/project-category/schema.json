@@ -4,7 +4,7 @@
   "info": {
     "singularName": "project-category",
     "pluralName": "project-categories",
-    "displayName": "Project Category"
+    "displayName": "02 ประเภทของโครงการ (หลัก)"
   },
   "options": {
     "draftAndPublish": true
