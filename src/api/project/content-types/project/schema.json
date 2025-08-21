@@ -20,13 +20,15 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project-category.project-category",
-      "inversedBy": "projects"
+      "inversedBy": "projects",
+      "required": true
     },
     "project_sub_categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project-sub-category.project-sub-category",
-      "inversedBy": "projects"
+      "inversedBy": "projects",
+      "required": true
     },
     "date": {
       "type": "date",
@@ -36,12 +38,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "ProjectDetail": {
       "type": "dynamiczone",
@@ -53,9 +50,7 @@
     },
     "urls": {
       "type": "dynamiczone",
-      "components": [
-        "url-item.urls"
-      ]
+      "components": ["url-item.urls"]
     }
   }
 }

@@ -6,7 +6,8 @@
   "options": {},
   "attributes": {
     "FacilityDetail": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     }
   },
   "config": {}

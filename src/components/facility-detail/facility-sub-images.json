@@ -8,12 +8,8 @@
     "FacilitySubImages": {
       "type": "media",
       "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "required": true,
+      "allowedTypes": ["images", "files", "videos", "audios"]
     }
   },
   "config": {}

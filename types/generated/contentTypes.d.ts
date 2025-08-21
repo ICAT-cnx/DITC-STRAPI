@@ -464,15 +464,18 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     facilities: Schema.Attribute.Relation<
       'oneToMany',
       'api::facility.facility'
-    >;
-    infos: Schema.Attribute.Relation<'oneToMany', 'api::info.info'>;
+    > &
+      Schema.Attribute.Required;
+    infos: Schema.Attribute.Relation<'oneToMany', 'api::info.info'> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::homepage.homepage'
     > &
       Schema.Attribute.Private;
-    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
+    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'> &
+      Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -528,7 +531,8 @@ export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    infos: Schema.Attribute.Relation<'oneToMany', 'api::info.info'>;
+    infos: Schema.Attribute.Relation<'oneToMany', 'api::info.info'> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -601,7 +605,8 @@ export interface ApiProjectSubCategoryProjectSubCategory
     project_category: Schema.Attribute.Relation<
       'manyToOne',
       'api::project-category.project-category'
-    >;
+    > &
+      Schema.Attribute.Required;
     projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     subCategory: Schema.Attribute.String & Schema.Attribute.Required;
@@ -640,11 +645,13 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     project_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::project-category.project-category'
-    >;
+    > &
+      Schema.Attribute.Required;
     project_sub_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::project-sub-category.project-sub-category'
-    >;
+    > &
+      Schema.Attribute.Required;
     ProjectDetail: Schema.Attribute.DynamicZone<
       [
         'project-detail.project-sub-images',
@@ -775,7 +782,8 @@ export interface ApiStaffStaff extends Struct.CollectionTypeSchema {
     staff_category: Schema.Attribute.Relation<
       'manyToOne',
       'api::staff-category.staff-category'
-    >;
+    > &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

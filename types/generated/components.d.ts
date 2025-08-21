@@ -7,7 +7,7 @@ export interface FacilityDetailFacilityDescription
     displayName: '\u0E04\u0E33\u0E2D\u0E18\u0E34\u0E1A\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E2D\u0E33\u0E19\u0E27\u0E22\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E30\u0E14\u0E27\u0E01';
   };
   attributes: {
-    FacilityDetail: Schema.Attribute.Blocks;
+    FacilityDetail: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -21,7 +21,8 @@ export interface FacilityDetailFacilitySubImages
     FacilitySubImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
   };
 }
 
@@ -31,7 +32,7 @@ export interface NewsDetailNewsDescription extends Struct.ComponentSchema {
     displayName: '\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21\u0E02\u0E48\u0E32\u0E27\u0E2A\u0E32\u0E23';
   };
   attributes: {
-    NewsDescription: Schema.Attribute.Blocks;
+    NewsDescription: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -44,7 +45,8 @@ export interface NewsDetailNewsSubImages extends Struct.ComponentSchema {
     NewsSubImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
   };
 }
 
@@ -55,7 +57,7 @@ export interface ProjectDetailProjectDescription
     displayName: '\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21\u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23';
   };
   attributes: {
-    ProjectDescription: Schema.Attribute.Blocks;
+    ProjectDescription: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -68,7 +70,8 @@ export interface ProjectDetailProjectSubImages extends Struct.ComponentSchema {
     ProjectSubImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
   };
 }
 

@@ -23,7 +23,8 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::project-category.project-category",
-      "inversedBy": "project_sub_categories"
+      "inversedBy": "project_sub_categories",
+      "required": true
     },
     "projects": {
       "type": "relation",

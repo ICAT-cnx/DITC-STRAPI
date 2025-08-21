@@ -14,7 +14,8 @@
     "infos": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::info.info"
+      "target": "api::info.info",
+      "required": true
     }
   }
 }

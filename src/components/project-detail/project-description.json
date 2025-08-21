@@ -6,7 +6,8 @@
   "options": {},
   "attributes": {
     "ProjectDescription": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     }
   },
   "config": {}

@@ -6,7 +6,8 @@
   "options": {},
   "attributes": {
     "NewsDescription": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     }
   },
   "config": {}

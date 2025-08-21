@@ -14,17 +14,20 @@
     "projects": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::project.project"
+      "target": "api::project.project",
+      "required": true
     },
     "facilities": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::facility.facility"
+      "target": "api::facility.facility",
+      "required": true
     },
     "infos": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::info.info"
+      "target": "api::info.info",
+      "required": true
     }
   }
 }

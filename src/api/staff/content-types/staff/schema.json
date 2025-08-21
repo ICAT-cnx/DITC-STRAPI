@@ -27,18 +27,14 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::staff-category.staff-category",
-      "inversedBy": "staff"
+      "inversedBy": "staff",
+      "required": true
     },
     "profile_image": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     }
   }
 }
