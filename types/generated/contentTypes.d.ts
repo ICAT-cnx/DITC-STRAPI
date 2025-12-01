@@ -517,6 +517,34 @@ export interface ApiInfoInfo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiJsonprojectJsonproject extends Struct.SingleTypeSchema {
+  collectionName: 'json_projects';
+  info: {
+    displayName: 'jsonprojects';
+    pluralName: 'jsonprojects';
+    singularName: 'jsonproject';
+  };
+  options: {
+    comment: '';
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::jsonproject.jsonproject'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
   collectionName: 'news_pages';
   info: {
@@ -1303,6 +1331,7 @@ declare module '@strapi/strapi' {
       'api::facility.facility': ApiFacilityFacility;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::info.info': ApiInfoInfo;
+      'api::jsonproject.jsonproject': ApiJsonprojectJsonproject;
       'api::news-page.news-page': ApiNewsPageNewsPage;
       'api::project-category.project-category': ApiProjectCategoryProjectCategory;
       'api::project-sub-category.project-sub-category': ApiProjectSubCategoryProjectSubCategory;

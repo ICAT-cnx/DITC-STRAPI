@@ -1,0 +1,13 @@
+{
+  "kind": "singleType",
+  "collectionName": "json_projects",
+  "info": {
+    "singularName": "jsonproject",
+    "pluralName": "jsonprojects",
+    "displayName": "jsonprojects"
+  },
+  "options": {
+    "comment": ""
+  },
+  "attributes": {}
+}
