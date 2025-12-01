@@ -528,6 +528,11 @@ export interface ApiJsonprojectJsonproject extends Struct.SingleTypeSchema {
     comment: '';
     draftAndPublish: false;
   };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

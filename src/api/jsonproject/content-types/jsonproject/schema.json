@@ -9,5 +9,10 @@
   "options": {
     "comment": ""
   },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    }
+  },
   "attributes": {}
 }
